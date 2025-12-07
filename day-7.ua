@@ -7,10 +7,10 @@ Input ← AoCGet 2025 7
 Test  ← ".......S.......\n...............\n.......^.......\n...............\n......^.^......\n...............\n.....^.^.^.....\n...............\n....^.^...^....\n...............\n...^.^...^.^...\n...............\n..^...^.....^..\n...............\n.^.^.^.^.^...^.\n..............."
 
 # ====== SOLUTION ======
-Parse     ← ⊙°¤⊃↘↙1≠@.⊜∘⊸≠@\n
-SplitStep ← +⊃(⁅FFTConvolve~Same⋯5×|×⊙¬)
-Part₁     ← ◌∧⊃(˜SplitStep|+/+×⊙±)⊙⊙0Parse
-Part₂     ← /+∧˜SplitStep Parse
+Parse     ← ⊃↘₁⊢≠@.⊜∘⊸≠@\n
+SplitStep ← +⁅FFTConvolve~Same⋯5∩⌟×⟜¬
+Part₁     ← ◌∧⊃SplitStep(+/+±×)⊙⊙0Parse
+Part₂     ← /+∧SplitStep Parse
 
 # ======== RUNNING ========
 $"Part one solution is: '_'" Part₁ Input
