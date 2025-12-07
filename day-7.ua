@@ -13,9 +13,12 @@ Part₁ ← ◌∧⊃Step(+/+±×)⊙⊙0Parse
 Part₂ ← /+∧Step Parse
 
 # ====== VISUALIZATION ======
-√₆÷/↥⊸♭⤚∧⊸Step Parse Input
-&ims+∩⍉⊓(⊂⊙˙⊟˜↯0⊸△|˙⊟₃)
+Visualize ← (
+  √₆÷/↥⊸♭⤚∧⊸Step Parse
+  &ims+∩⍉⊓(⊂⊙˙⊟˜↯0⊸△|˙⊟₃)
+)
 
 # ======== RUNNING ========
+Visualize Input
 $"Part one solution is: '_'" Part₁ Input
 $"Part two solution is: '_'" Part₂ Input
