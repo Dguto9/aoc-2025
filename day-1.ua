@@ -2,18 +2,17 @@
 
 # ====== INPUTS ======
 Input ← AoCGet 2025 1
-# "L68\nL30\nR48\nL5\nR60\nL55\nL1\nL99\nR14\nL82"
+Test  ← "L68\nL30\nR48\nL5\nR60\nL55\nL1\nL99\nR14\nL82"
 
 # ====== PART ======
 Parse       ← ⊜(×⊃(-⊸¬=@R↙|⋕↘)1)⊸≠@\n
 Walk        ← ∧(⊂⊸(+⊙⊢))⊙50
-NatsBetween ← +⇡⤚-⊙(+1)°⊟
+Zeros       ← =0◿₁₀₀
+NatsBetween ← ⨬↘₋₁↘₁°(-⊸¬)±⊃-⍜-⇡
 
-Part₁ ← /+=0◿₁₀₀Walk Parse
-Part₂ ← /+⌵⧈₂(/-⌈÷₁₀₀)⇌Walk Parse
-Slow  ← ∧(+/+=0◿₁₀₀NatsBetween)⊙0⧈₂∘ Walk Parse
+Part₁ ← /+Zeros Walk Parse
+Part₂ ← +∩/+Zeros⟜⧈(/+Zeros NatsBetween)Walk Parse
 
 # ======== RUNNING ========
 $"Part one solution is: '_'" Part₁ Input
-# $"Part two solution is: '_'" +Part₂⟜Part₁ Input
-
+$"Part two solution is: '_'" Part₂ Input
